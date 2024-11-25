@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order,sale.order access,model_sale_order,,1,1,1,1
+access_service_service,service.service access,model_service_service,,1,1,1,1
+access_attendance_employee,attendance.employee,model_attendance_employee,,1,1,1,1
+access_res_partner,res.partner,model_res_partner,,1,1,1,1
+access_todo_list,access_todo_list,model_owl_todo_list,,1,1,1,1
+

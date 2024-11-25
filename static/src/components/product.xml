@@ -1,0 +1,14 @@
+<template>
+    <div class="col-2 product-item m-1 p-1 border rounder">
+        <span t-esc="props.product.id"/>-
+        <span t-esc="props.product.name"/>
+        <br/>
+        <span class="price"
+              t-esc="props.product.list_price.toLocalString('es-ES', {style: 'currency', currency : 'EUR'})"/>
+        <i t-att-id="props.product.id"
+           t-on-click="delProduct"
+           title="Delete"
+           class="fa fa-trash">
+        </i>
+    </div>
+</template>

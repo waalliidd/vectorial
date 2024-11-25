@@ -1,0 +1,45 @@
+<odoo>
+    <!-- Form View Extension for Sale Order -->
+    <record id="view_sale_order_form_custom" model="ir.ui.view">
+        <field name="name">sale.order.form.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/> <!-- Inherit the original Sale Order form -->
+        <field name="arch" type="xml">
+            <!-- Add a custom field after the order name -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="custom_field"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Tree/List View Extension for Sale Order -->
+    <record id="view_sale_order_tree_custom" model="ir.ui.view">
+        <field name="name">sale.order.tree.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/> <!-- Inherit the original Sale Order list -->
+        <field name="arch" type="xml">
+            <!-- Add a custom field in the list view -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="custom_field"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+
+    <record id="view_res_config_settings" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form</field>
+    <field name="model">res.config.settings</field>
+    <field name="arch" type="xml">
+        <form string="Settings">
+            <sheet>
+                <group>
+                    <field name="sale_header_name"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+</odoo>

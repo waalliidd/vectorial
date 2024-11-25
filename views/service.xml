@@ -1,0 +1,25 @@
+<odoo>
+    <record id="view_servicel_form" model="ir.ui.view">
+        <field name="name">service.service.form</field>
+        <field name="model">service.service</field>
+        <field name="arch" type="xml">
+            <form string="My Model Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Optional: Add to a Menu Action -->
+    <record id="action_service" model="ir.actions.act_window">
+        <field name="name">service</field>
+        <field name="res_model">service.service</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Optional: Add to the Main Menu -->
+</odoo>

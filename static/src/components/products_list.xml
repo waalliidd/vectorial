@@ -1,0 +1,28 @@
+<template>
+    <div id="product-comp" class="m-2 container" t-name="owl_product_list.ProductList" owl="1">
+        <div class="container">
+            <h2>Odoo Product List</h2>
+            <div class="row">
+                <div class="input-group mb-3">
+                    <input id="input-product-name"
+                           type="text"
+                           t-ref="input"
+                           class="from-control"
+                           placeholder="HP 123.25"
+                           aria-label="Product name"
+                           aria-describedby="button-addons2"/>
+                    <button class="btn btn-outline-secondary"
+                            type="button"
+                            id="button-addons2"
+                            t-on-click="addProduct">Add
+                    </button>
+                </div>
+            </div>
+            <div class="row align-items-start text-center product-list">
+                <t t-foreach="products" t-as="products" t-key="product.id">
+                    <Product product="product" onDelete.bind="delProduct"/>
+                </t>
+            </div>
+        </div>
+    </div>
+</template>
