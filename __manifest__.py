@@ -1,27 +1,34 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
-	'name': 'VictorialService',
+	'name': 'Victorial Service Management',
 	'version': '1.0',
-	'category': 'Vectorial/Vectorial',
-	'summary': '',
-	'depends': ['contacts', 'sale_management', 'hr', 'web', 'website', 'sale'],
+	'category': 'Vectorial/Services',
+	'summary': 'Manage services, tasks, and sales orders in Vectorial.',
+	'description': """
+        This module provides:
+        - Integration of services with sales orders
+        - Management of employee attendance
+        - Task tracking using a to-do list feature
+    """,
+	'depends': ['base', 'contacts', 'sale_management', 'hr', 'web', 'sale'],
 	'data': [
 		'security/ir.model.access.csv',
 		'views/sale_order.xml',
 		'views/service.xml',
 		'views/attendance_employee_views.xml',
+		'views/todo_lisst.xml',
 		'views/main.xml',
-		'views/todo_lidt.xml',
-	
 	],
 	'assets': {
 		'web.assets_backend': [
-		#	'vectorial/static/src/components/product.js',
-		#	'vectorial/static/src/components/product_list.js',
-		#	'vectorial/static/src/components/product.xml',
-		#	'vectorial/static/src/components/product_list.xml',
-		#	'vectorial/static/src/components/product_list.scss',
+			'/vectorial/static/src/components/todo_list.js',
+			'/vectorial/static/src/components/todo_list.xml',
+			'/vectorial/static/src/components/todo_list.scss',
+		#	'/vectorial/static/src/components/product.js',
+		#	'/vectorial/static/src/components/product.xml',
+		#	'/vectorial/static/src/components/product_list.js',
+		#	'/vectorial/static/src/components/product_list.xml',
+		#	'/vectorial/static/src/components/product_list.scss',
 		],
 	},
 	

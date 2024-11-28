@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <record id="todo_list_from" model="ir.ui.view">
-            <field name="name">Todo List</field>
+        <!-- Form View -->
+        <record id="view_todo_list_form" model="ir.ui.view">
+            <field name="name">todo.list.form</field>
             <field name="model">owl.todo.list</field>
             <field name="arch" type="xml">
                 <form>
@@ -16,8 +17,10 @@
                 </form>
             </field>
         </record>
-        <record id="todo_list_tree" model="ir.ui.view">
-            <field name="name">Todo List</field>
+
+        <!-- Tree View -->
+        <record id="view_todo_list_tree" model="ir.ui.view">
+            <field name="name">todo.list.tree</field>
             <field name="model">owl.todo.list</field>
             <field name="arch" type="xml">
                 <tree>
@@ -27,15 +30,23 @@
                 </tree>
             </field>
         </record>
+
+        <!-- Action for tree and form views -->
         <record id="action_todo_list" model="ir.actions.act_window">
             <field name="name">Todo List</field>
             <field name="res_model">owl.todo.list</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-    </data>
-    <menuitem name="owl to" id="menu_owl_tt" sequence="10">
-    <menuitem name="owl todo list " id="menu_owl_list" sequence="10" action="action_todo_list"/>
+        <!-- OWL JS Action -->
+        <record id="action_owl_todo_list_js" model="ir.actions.client">
+            <field name="name">Todo List OWL</field>
+            <field name="tag">owl.action_owl_todo_list_js</field>
+        </record>
 
-    </menuitem>
+        <!-- Menu Items -->
+        <menuitem name="OWL Todo" id="menu_owl_tt" sequence="10"/>
+        <menuitem name="Todo List" id="menu_owl_list" parent="menu_owl_tt" sequence="10" action="action_todo_list"/>
+        <menuitem name="Todo List JS" id="menu_owl_list_js" parent="menu_owl_tt" sequence="20" action="action_owl_todo_list_js"/>
+    </data>
 </odoo>
