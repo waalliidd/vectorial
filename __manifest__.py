@@ -25,6 +25,8 @@
 			'/vectorial/static/src/components/todo_list.js',
 			'/vectorial/static/src/components/todo_list.xml',
 			'/vectorial/static/src/components/todo_list.scss',
+			'/vectorial/static/src/components/valid_email_field.js',
+			'/vectorial/static/src/components/valid_email_field.xml',
 			#	'/vectorial/static/src/components/res_partner_list_view.js',
 			#	'/vectorial/static/src/components/res_partner_list_view.xml',
 		
