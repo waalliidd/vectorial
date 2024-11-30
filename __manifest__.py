@@ -17,20 +17,17 @@
 		'views/service.xml',
 		'views/attendance_employee_views.xml',
 		'views/todo_lisst.xml',
-		'views/main.xml',
 		'views/res_partner.xml',
+		'views/main.xml',
 	],
 	'assets': {
 		'web.assets_backend': [
-			'/vectorial/static/src/components/todo_list/todo_list.js',
-			'/vectorial/static/src/components/todo_list/todo_list.xml',
-			'/vectorial/static/src/components/todo_list/todo_list.scss',
-			'/vectorial/static/src/components/view_inheritance/res_partner_list_view.js',
-		#	'/vectorial/static/src/components/product.js',
-		#	'/vectorial/static/src/components/product.xml',
-		#	'/vectorial/static/src/components/product_list.js',
-		#	'/vectorial/static/src/components/product_list.xml',
-		#	'/vectorial/static/src/components/product_list.scss',
+			'/vectorial/static/src/components/todo_list.js',
+			'/vectorial/static/src/components/todo_list.xml',
+			'/vectorial/static/src/components/todo_list.scss',
+			#	'/vectorial/static/src/components/res_partner_list_view.js',
+			#	'/vectorial/static/src/components/res_partner_list_view.xml',
+		
 		],
 	},
 	

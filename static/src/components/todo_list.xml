@@ -36,18 +36,18 @@
                                    <span t-esc="task.name"/>
                               </label>
                           </div>
-                        </td>
+                          </td>
                           <td>
                             <input type="color" class="form-control form-control-color" id="exampleColorInput"
                                    t-att-value="task.color" title="Choose your color"
                                    t-on-change="(e)=>this.updateColor(e, task)"/>
-                        </td>
+                          </td>
                           <td>
                             <button type="btn btn-success m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                     t-on-click="()=>this.editTask()"
                             >Edit</button>
                               <button type="btn btn-danger" t-on-click="()=>this.deleteTask(task)">Delete</button>
-                        </td>
+                          </td>
                     </tr>
                 </tbody>
         </table>
