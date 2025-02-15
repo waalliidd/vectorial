@@ -1,4 +1,5 @@
-<template>
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates  xml:space="preserve">
     <div class="col-2 product-item m-1 p-1 border rounder">
         <span t-esc="props.product.id"/>-
         <span t-esc="props.product.name"/>
@@ -11,4 +12,4 @@
            class="fa fa-trash">
         </i>
     </div>
-</template>
+</templates>

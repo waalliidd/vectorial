@@ -1,4 +1,5 @@
-<template>
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates  xml:space="preserve">
     <div id="product-comp" class="m-2 container" t-name="owl_product_list.ProductList" owl="1">
         <div class="container">
             <h2>Odoo Product List</h2>
@@ -25,4 +26,4 @@
             </div>
         </div>
     </div>
-</template>
+</templates>
